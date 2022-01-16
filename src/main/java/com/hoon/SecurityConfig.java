@@ -125,6 +125,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 }) // 인가 실패 시 처리
         ;
 
+        http.csrf().disable();   // CSRF(Cross-Site Request Forgery) disable처리. 기본적으로 활성화되있긴함. 개발할 때 켜놓고하는게 좋다.
+
     }
 
     /**
